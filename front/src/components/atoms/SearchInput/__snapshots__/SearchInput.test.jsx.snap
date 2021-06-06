@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchInput should match snapshot 1`] = `
+<input
+  className="search-input"
+  onChange={[MockFunction]}
+  placeholder="Nunca dejes de buscar"
+  type="text"
+  value="input value"
+/>
+`;
