@@ -1,0 +1,10 @@
+@import 'assets/scss/variables';
+
+.header {
+	background-color: $color-primary;
+}
+
+.header__content {
+	padding-bottom: $space-8;
+	padding-top: $space-8;
+}
