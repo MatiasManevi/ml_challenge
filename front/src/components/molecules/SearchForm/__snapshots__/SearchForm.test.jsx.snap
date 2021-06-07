@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchForm should match snapshot 1`] = `
+<form
+  className="search-form"
+>
+  <SearchInput
+    changeHandler={[Function]}
+  />
+  <SearchButton
+    clickHandler={[Function]}
+  />
+</form>
+`;
