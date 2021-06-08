@@ -12,18 +12,16 @@ const Header = () => {
 	return (
 		<div className="header">
 			<Container>
-				<div className="header__content">
-					<Grid container justify="center" spacing={4}>
-						<Grid item>
+				<Grid container justify="center">
+					<Grid item xs={10}>
+						<div className="header__content">
 							<Link to="/">
 								<Logo />
 							</Link>
-						</Grid>
-						<Grid item xs={9}>
 							<SearchForm />
-						</Grid>
+						</div>
 					</Grid>
-				</div>
+				</Grid>
 			</Container>
 		</div>
 	);

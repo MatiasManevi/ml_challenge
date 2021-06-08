@@ -5,6 +5,9 @@
 }
 
 .header__content {
+	display: flex;
+	justify-content: center;
+	column-gap: $space-32;
 	padding-bottom: $space-8;
 	padding-top: $space-8;
 }
