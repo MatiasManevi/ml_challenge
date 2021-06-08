@@ -3,6 +3,8 @@ import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 
 import './Header.scss';
+import { Link } from 'react-router-dom';
+
 import { SearchForm } from 'components/molecules';
 import { Logo } from 'components/atoms';
 
@@ -13,7 +15,9 @@ const Header = () => {
 				<div className="header__content">
 					<Grid container justify="center" spacing={4}>
 						<Grid item>
-							<Logo />
+							<Link to="/">
+								<Logo />
+							</Link>
 						</Grid>
 						<Grid item xs={9}>
 							<SearchForm />
