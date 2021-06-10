@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './Price.scss';
+
 const Price = ({ price, small = true, freeShipping = false }) => {
 	return (
 		<>
