@@ -1,0 +1,13 @@
+@import 'assets/scss/variables';
+
+.price--small {
+	font-size: $font-size-24;
+}
+
+.price--big {
+	font-size: $font-size-46;
+}
+
+.price__shipping {
+	margin-left: $space-4;
+}

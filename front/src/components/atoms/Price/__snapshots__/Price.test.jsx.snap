@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Price should match snapshot 1`] = `
+<Fragment>
+  <p
+    className="price--big"
+  >
+    $ 
+    2000
+  </p>
+</Fragment>
+`;
