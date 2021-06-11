@@ -5,27 +5,26 @@ exports[`Header should match snapshot 1`] = `
   className="header"
 >
   <WithStyles(ForwardRef(Container))>
-    <div
-      className="header__content"
+    <WithStyles(ForwardRef(Grid))
+      container={true}
+      justify="center"
     >
       <WithStyles(ForwardRef(Grid))
-        container={true}
-        justify="center"
-        spacing={4}
+        item={true}
+        xs={10}
       >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
+        <div
+          className="header__content"
         >
-          <Logo />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs={9}
-        >
+          <Link
+            to="/"
+          >
+            <Logo />
+          </Link>
           <SearchForm />
-        </WithStyles(ForwardRef(Grid))>
+        </div>
       </WithStyles(ForwardRef(Grid))>
-    </div>
+    </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Container))>
 </div>
 `;

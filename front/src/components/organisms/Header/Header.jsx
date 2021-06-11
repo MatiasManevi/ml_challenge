@@ -1,9 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 
 import './Header.scss';
-import { Link } from 'react-router-dom';
 
 import { SearchForm } from 'components/molecules';
 import { Logo } from 'components/atoms';
