@@ -2,7 +2,7 @@
 
 exports[`Content should match snapshot 1`] = `
 <div
-  className="items"
+  className="content"
 >
   <WithStyles(ForwardRef(Container))>
     <WithStyles(ForwardRef(Grid))
