@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Items should match snapshot 1`] = `
+<Content>
+  <div
+    className="items"
+  >
+    <BreadcrumbMenu />
+    <Link
+      className="items__link"
+      to="/items/1"
+    >
+      <Item />
+    </Link>
+    <Link
+      className="items__link"
+      to="/items/2"
+    >
+      <Item />
+    </Link>
+  </div>
+</Content>
+`;
