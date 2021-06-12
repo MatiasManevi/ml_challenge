@@ -1,0 +1,33 @@
+@import 'assets/scss/variables';
+
+.item-detail {
+	background-color: $color-white;
+	padding: $space-32;
+}
+
+.item-detail__picture {
+	width: $detail-img-width;
+}
+
+.item-detail__description-title {
+	font-size: $font-size-28;
+	font-weight: 100;
+	margin-bottom: $space-32;
+}
+
+.item-detail__description-content {
+	font-size: $font-size-16;
+	color: $color-neutral;
+}
+
+.item-detail__condition {
+	font-size: $font-size-14;
+	color: $color-neutral-darker;
+	margin-bottom: $space-16;
+}
+
+.item-detail__name {
+	font-size: $font-size-24;
+	font-weight: bold;
+	margin-bottom: $space-32;
+}
