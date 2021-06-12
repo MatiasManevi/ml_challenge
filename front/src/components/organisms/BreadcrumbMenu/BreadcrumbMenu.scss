@@ -1,0 +1,9 @@
+@import 'assets/scss/variables';
+
+.breadcrumb-menu {
+	display: flex;
+	padding: $space-16 0;
+	color: $color-neutral;
+	justify-content: left;
+	align-items: center;
+}
