@@ -1,12 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Price should match snapshot 1`] = `
-<Fragment>
+<div
+  className="price"
+>
   <p
-    className="price--big"
+    className="price--small"
   >
-    $ 
-    2000
+    $ 1.222
+    <sup
+      className="price__cents--small"
+    >
+      23
+    </sup>
   </p>
-</Fragment>
+</div>
 `;
