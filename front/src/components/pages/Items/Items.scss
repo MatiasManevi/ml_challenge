@@ -1,3 +1,9 @@
-.link {
+@import 'assets/scss/variables/spacing';
+
+.items {
+	margin-bottom: $space-42;
+}
+
+.items__link {
 	text-decoration: none;
 }
