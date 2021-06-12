@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import BreadcrumbMenu from './BreadcrumbMenu';
+import Item from '../Item';
 
-describe('BreadcrumbMenu', () => {
+describe('Item', () => {
 	it('should match snapshot', () => {
-		const wrapper = shallow(<BreadcrumbMenu />);
+		const wrapper = shallow(<Item />);
 		expect(wrapper).toMatchSnapshot();
 	});
 });

@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import TextButton from './TextButton';
+import TextButton from '../TextButton';
 
 describe('TextButton', () => {
 	const clickHandler = jest.fn();

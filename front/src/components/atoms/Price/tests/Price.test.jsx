@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import Price from './Price';
+import Price from '../Price';
 
 describe('Price', () => {
 	const price = 2000;
