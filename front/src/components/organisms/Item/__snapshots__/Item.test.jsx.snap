@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Item should match snapshot 1`] = `
+<WithStyles(ForwardRef(Paper))
+  className="item"
+>
+  <img
+    alt=""
+    className="item__thumbnail"
+    src="https://www.revistaneo.com/sites/default/files/2020-01/Mercado%20Libre%20dio%20a%20conocer%20los%20productos%20m%C3%A1s%20vendidos%20en%202019.jpg"
+  />
+  <div
+    className="item__content"
+  >
+    <div
+      className="item__description"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="baseline"
+        container={true}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={10}
+        >
+          <Price
+            price={123}
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={2}
+        >
+          <p
+            className="item__place"
+          >
+            Mendoza
+          </p>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <p
+      className="item__title"
+    >
+      Apple Ipod Touch 5g 16 gb Negro Igual a Nuevo Completo Unico!
+    </p>
+  </div>
+</WithStyles(ForwardRef(Paper))>
+`;
