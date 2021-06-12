@@ -6,7 +6,7 @@ import './Content.scss';
 
 const Content = ({ children }) => {
 	return (
-		<div className="items">
+		<div className="content">
 			<Container>
 				<Grid container justify="center">
 					<Grid item xs={10}>
