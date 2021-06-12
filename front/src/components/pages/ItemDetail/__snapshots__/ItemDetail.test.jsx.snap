@@ -2,16 +2,7 @@
 
 exports[`ItemDetail should match snapshot 1`] = `
 <Content>
-  <div
-    style={
-      Object {
-        "paddingBottom": "16px",
-        "paddingTop": "16px",
-      }
-    }
-  >
-    Breadcrumb
-  </div>
+  <BreadcrumbMenu />
   <WithStyles(ForwardRef(Grid))
     className="item-detail"
     container={true}

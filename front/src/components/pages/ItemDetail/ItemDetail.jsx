@@ -3,6 +3,7 @@ import Grid from '@material-ui/core/Grid';
 
 import './ItemDetail.scss';
 import { Price, PrimaryButton } from 'components/atoms';
+import { BreadcrumbMenu } from 'components/organisms';
 import { Content } from 'components/templates';
 
 const ItemDetail = ({ match }) => {
@@ -12,8 +13,7 @@ const ItemDetail = ({ match }) => {
 
 	return (
 		<Content>
-			<div style={{ paddingBottom: '16px', paddingTop: '16px' }}>Breadcrumb</div>
-
+			<BreadcrumbMenu />
 			<Grid container className="item-detail">
 				<Grid item xs={9}>
 					<img
