@@ -1,0 +1,14 @@
+@import 'assets/scss/variables';
+
+.primary-button {
+	color: $color-white;
+	font-size: $font-size-16;
+	background-color: $color-secondary;
+	width: 100%;
+	height: $space-42;
+	cursor: pointer;
+	text-decoration: none;
+	padding: $space-8;
+	border-radius: $thumbnail-radius;
+	border: none;
+}
