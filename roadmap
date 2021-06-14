@@ -8,7 +8,7 @@ Front
 6. Crear componente BreadcrumbMenu
 
 Api
-0. Crear proyecto express
+0. Crear proyecto express - ok
 1. Instalar json parser, cors, axios
 2. Crear routes/items.js
 3. Crear middleware para author
