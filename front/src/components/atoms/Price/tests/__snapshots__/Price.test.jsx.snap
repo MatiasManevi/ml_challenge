@@ -9,7 +9,7 @@ exports[`Price should match snapshot 1`] = `
   >
     $ 1.222
     <sup
-      className="price__cents--small"
+      className="price__cents price__cents--small"
     >
       23
     </sup>
