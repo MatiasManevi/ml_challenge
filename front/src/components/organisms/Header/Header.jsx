@@ -4,7 +4,6 @@ import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 
 import './Header.scss';
-
 import { SearchForm } from 'components/molecules';
 import { Logo } from 'components/atoms';
 
