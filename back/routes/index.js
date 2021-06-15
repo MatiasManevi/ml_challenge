@@ -1,13 +1,9 @@
 const express = require('express');
+const { itemsController } = require('../controllers');
 
 const router = express.Router();
 
-router.get('/items', (req, res) => {
-	res.send('items endpoint');
-});
-
-router.get('/items/:id', (req, res) => {
-	res.send('item detail endpoint');
-});
+router.get('/items', itemsController.get);
+router.get('/items/:id', itemsController.getById);
 
 module.exports = router;
