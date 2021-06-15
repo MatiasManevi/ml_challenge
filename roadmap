@@ -11,7 +11,7 @@ Api
 0. Crear proyecto express - ok
 1. Instalar json parser, cors, axios - ok
 2. Crear routes/items - ok
-3. Crear middleware para author
-4. Crear controllers/items
-5. Crear services/item
-6. Item model debe ser encargado de obtener la info de ML
+3. Crear controllers/items - ok
+4. Crear services/item
+5. Crear funcion para obtener el cuerpo del response
+6. Crear middleware para author
