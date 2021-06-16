@@ -1,14 +1,31 @@
-const getItems = async () => {
+const axios = require('axios');
+const { MELI_BASE_URL } = require('../../config');
+
+/**
+ * Given a query string, it returns the amtching list of items from MELI API
+ * @param {string} queryString
+ * @returns Array of items
+ */
+const getItems = async (queryString) => {
 	try {
-		return 'items';
+		const response = await axios.get(
+			`${MELI_BASE_URL}/sites/MLA/search?q=${queryString}`
+		);
+		return response.data;
 	} catch (e) {
 		throw new Error(e.message);
 	}
 };
 
-const getItemDetail = async () => {
+/**
+ * Given an id, it returns the proper item from MELI API
+ * @param {string} id
+ * @returns item
+ */
+const getItemDetail = async (id) => {
 	try {
-		return 'item detail';
+		const response = await axios.get(`${MELI_BASE_URL}/items/${id}`);
+		return response.data;
 	} catch (e) {
 		throw new Error(e.message);
 	}
