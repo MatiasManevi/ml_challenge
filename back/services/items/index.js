@@ -25,7 +25,8 @@ const getItems = async (queryString) => {
 const getItemDetail = async (id) => {
 	try {
 		const response = await axios.get(`${MELI_BASE_URL}/items/${id}`);
-		return response.data;
+		const response2 = await axios.get(`${MELI_BASE_URL}/items/${id}/description`);
+		return { detail: response.data, description: response2.data };
 	} catch (e) {
 		throw new Error(e.message);
 	}
