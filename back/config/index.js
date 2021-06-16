@@ -2,6 +2,6 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 module.exports = {
-	MELI_BASE_URL: process.env.API_KEY,
-	port: process.env.PORT
+	MELI_BASE_URL: process.env.MELI_BASE_URL,
+	PORT: process.env.PORT
 };
