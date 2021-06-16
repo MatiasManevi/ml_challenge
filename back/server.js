@@ -1,6 +1,6 @@
 const app = require('./setup-express');
 const routes = require('./routes');
-const port = process.env.PORT || 5000;
+const { port } = require('./config');
 
 app.get('/', (_, res) => res.send('App is working'));
 
