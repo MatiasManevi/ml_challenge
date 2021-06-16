@@ -5,7 +5,10 @@ Front
 3. Crear componente Items - ok
 4. Crear componente Item - ok
 5. Crear componente ItemDetail - ok
-6. Crear componente BreadcrumbMenu
+6. Crear componente BreadcrumbMenu - ok
+7. Conectar SearchForm con Api
+9. Renderizar items con datos obtenidos desde Api
+10. Renderizar item detail con datos obtenidos desde Api
 
 Api
 0. Crear proyecto express - ok
@@ -13,6 +16,6 @@ Api
 2. Crear routes/items - ok
 3. Crear controllers/items - ok
 4. Crear services/item - ok
-5. Obtener data desde api ML - ok
-6. Crear funcion para obtener el cuerpo del response
+5. Obtener data desde api ML 
+6. Crear funcion para parsear el cuerpo del response
 7. Crear middleware para author
