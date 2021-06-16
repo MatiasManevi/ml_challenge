@@ -4,14 +4,16 @@ const { MELI_BASE_URL } = require('../../config');
 /**
  * Given a query string, it returns the amtching list of items from MELI API
  * @param {string} queryString
+ * @param {number} limit
+ * @param {number} offset
  * @returns Array of items
  */
-const getItems = async (queryString) => {
+const getItems = async (queryString, limit, offset) => {
 	try {
 		const response = await axios.get(
 			`${MELI_BASE_URL}/sites/MLA/search?q=${queryString}`
 		);
-		return response.data;
+		return response.data.results.slice(offset, limit);
 	} catch (e) {
 		throw new Error(e.message);
 	}
