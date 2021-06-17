@@ -17,5 +17,6 @@ Api
 3. Crear controllers/items - ok
 4. Crear services/item - ok
 5. Obtener data desde api ML - ok
-6. Crear funcion para parsear el cuerpo del response
-7. Crear middleware para author
+6. Crear funcion para parsear el cuerpo del response -ok
+7. Crear middleware para author -ok 
+9. Obtener categorias de listado para el breadcrumb
