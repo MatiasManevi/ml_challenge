@@ -8,11 +8,9 @@ import { Price } from 'components/atoms';
 const Item = ({ item }) => {
 	return (
 		<Paper className="item">
-			<img
-				src={item.picture}
-				alt={`imagen de ${item.title}`}
-				className="item__thumbnail"
-			/>
+			<div className="item__thumbnail">
+				<img src={item.picture} alt={`imagen de ${item.title}`} />
+			</div>
 			<div className="item__content">
 				<div className="item__description">
 					<Grid container alignItems="baseline">
