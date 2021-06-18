@@ -12,7 +12,6 @@ const useSearchForm = () => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		history.push(`/items?search=${query}`);
-		setQuery('');
 	};
 
 	return {
