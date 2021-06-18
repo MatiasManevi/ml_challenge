@@ -3,6 +3,11 @@ const currencies = {
 	USD: 'u$s'
 };
 
+const conditions = {
+	new: 'Nuevo',
+	used: 'Usado'
+};
+
 const author = {
 	name: 'Matias',
 	lastname: 'Manevi'
@@ -10,5 +15,6 @@ const author = {
 
 module.exports = {
 	currencies,
-	author
+	author,
+	conditions
 };

@@ -1,8 +1,10 @@
-const { currencies } = require('./constants');
+const { currencies, conditions } = require('./constants');
 
 const parseListItem = (item) => {
 	const [amount, decimals] = parsePrice(item.price);
 	const currency = parseCurrency(item.currency_id);
+	const condition = parseCondition(item.condition);
+
 	return {
 		id: item.id,
 		title: item.title,
@@ -12,7 +14,7 @@ const parseListItem = (item) => {
 			decimals
 		},
 		picture: item.thumbnail,
-		condition: item.condition,
+		condition,
 		free_shipping: item.shipping.free_shipping
 	};
 };
@@ -28,6 +30,10 @@ const parseItemDetail = (item, description) => {
 
 const parseCurrency = (currency_id) => {
 	return currencies[currency_id];
+};
+
+const parseCondition = (condition_id) => {
+	return conditions[condition_id];
 };
 
 const parsePrice = (price) => {
