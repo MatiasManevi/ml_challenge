@@ -4,18 +4,20 @@ import { Link } from 'react-router-dom';
 import './Items.scss';
 import { Item, BreadcrumbMenu } from 'components/organisms';
 import { Content } from 'components/templates';
+import { useItems } from './hooks';
 
 const Items = () => {
+	const { items } = useItems();
+
 	return (
 		<Content>
 			<div className="items">
 				<BreadcrumbMenu />
-				<Link className="items__link" to="/items/1">
-					<Item />
-				</Link>
-				<Link className="items__link" to="/items/2">
-					<Item />
-				</Link>
+				{items.map((item) => (
+					<Link key={item.id} className="items__link" to={`/items/${item.id}`}>
+						<Item item={item} />
+					</Link>
+				))}
 			</div>
 		</Content>
 	);
