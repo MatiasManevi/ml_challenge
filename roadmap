@@ -6,8 +6,8 @@ Front
 4. Crear componente Item - ok
 5. Crear componente ItemDetail - ok
 6. Crear componente BreadcrumbMenu - ok
-7. Conectar SearchForm con Api
-9. Renderizar items con datos obtenidos desde Api
+7. Conectar SearchForm con Api - ok
+9. Renderizar items con datos obtenidos desde Api - ok
 10. Renderizar item detail con datos obtenidos desde Api
 
 Api
