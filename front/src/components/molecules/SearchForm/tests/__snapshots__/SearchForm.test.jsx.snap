@@ -5,10 +5,11 @@ exports[`SearchForm should match snapshot 1`] = `
   className="search-form"
 >
   <SearchInput
-    changeHandler={[Function]}
+    changeHandler={[MockFunction]}
+    value="Laptop"
   />
   <SearchButton
-    clickHandler={[Function]}
+    clickHandler={[MockFunction]}
   />
 </form>
 `;
