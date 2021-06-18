@@ -7,7 +7,7 @@ exports[`Item should match snapshot 1`] = `
   <img
     alt=""
     className="item__thumbnail"
-    src="https://www.revistaneo.com/sites/default/files/2020-01/Mercado%20Libre%20dio%20a%20conocer%20los%20productos%20m%C3%A1s%20vendidos%20en%202019.jpg"
+    src="http://http2.mlstatic.com/D_795607-MLA45583919609_042021-O.jpg"
   />
   <div
     className="item__content"
@@ -24,7 +24,14 @@ exports[`Item should match snapshot 1`] = `
           xs={10}
         >
           <Price
-            price={123}
+            freeShipping={true}
+            price={
+              Object {
+                "amount": 9950,
+                "currency": "$",
+                "decimals": "00",
+              }
+            }
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
@@ -34,7 +41,7 @@ exports[`Item should match snapshot 1`] = `
           <p
             className="item__place"
           >
-            Mendoza
+            Nuevo
           </p>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -42,7 +49,7 @@ exports[`Item should match snapshot 1`] = `
     <p
       className="item__title"
     >
-      Apple Ipod Touch 5g 16 gb Negro Igual a Nuevo Completo Unico!
+      Paleta Padel Wilson Ultimo Modelo Oferta En Toda La Linea Local Baires Deportes Oeste G B A Distribuidor Oficial
     </p>
   </div>
 </WithStyles(ForwardRef(Paper))>
