@@ -7,12 +7,10 @@ exports[`Price should match snapshot 1`] = `
   <p
     className="price--small"
   >
-    $ 1.222
+     
     <sup
       className="price__cents price__cents--small"
-    >
-      23
-    </sup>
+    />
   </p>
 </div>
 `;
