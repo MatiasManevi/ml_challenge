@@ -37,7 +37,7 @@ const parseCondition = (condition_id) => {
 };
 
 const parsePrice = (price) => {
-	const amount = Math.trunc(price);
+	const amount = Math.trunc(price).toLocaleString().replace(/\,+/g, '.');
 	let decimals = Math.round((price % 1.0) * 100);
 
 	if (decimals < 10) {
