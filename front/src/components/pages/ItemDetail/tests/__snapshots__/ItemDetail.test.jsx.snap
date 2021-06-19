@@ -12,9 +12,9 @@ exports[`ItemDetail should match snapshot 1`] = `
       xs={9}
     >
       <img
-        alt="imagen detalle de producto"
+        alt="imagen de Guantes Termicos Primera Piel Ski Trekking Running Softshell"
         className="item-detail__picture"
-        src="https://www.revistaneo.com/sites/default/files/2020-01/Mercado%20Libre%20dio%20a%20conocer%20los%20productos%20m%C3%A1s%20vendidos%20en%202019.jpg"
+        src="http://http2.mlstatic.com/D_970636-MLA45626185241_042021-O.jpg"
       />
       <h3
         className="item-detail__description-title"
@@ -24,7 +24,47 @@ exports[`ItemDetail should match snapshot 1`] = `
       <p
         className="item-detail__description-content"
       >
-        In vehicula iaculis dolor quis tempor. Praesent vitae neque quis diam efficitur aliquet vel eu metus. Sed finibus lorem non efficitur dapibus. Ut sodales id nisl sed ultrices. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ullamcorper ultricies laoreet. Vivamus dignissim finibus erat, ac mattis nulla scelerisque id. Proin ornare arcu velit, quis aliquam lorem molestie id. Nulla mattis gravida metus, et bibendum tortor scelerisque vitae.
+        Ale1416
+Tienda de Deportes – ProShop
+
+CARACTERISTICAS PRINCIPALES:
+
+. Tela Softshell
+. Retencion de la temperatura corporal
+. Absorben el calor y eliminan la humedad
+. Totalmente elasticos (se ajustan a cualquier mano)
+. Suaves al tacto
+. Talles Unicos - Unisex
+
+DIAS Y HORARIOS DE ATENCION
+De Lunes a Viernes de 8:00 Hs A 17:00 Hs
+Sabado, Domingo y Feriados cerrado
+
+
+ESTAMOS POR CABALLITO 
+Cerca de Av. Directorio y Av. Jose Maria Moreno
+
+Si venis en colectivo
+Te acercan mas de 20 lineas
+
+Si venis en subte
+Est. Jose Maria Moreno - Linea E
+
+Si venis en tren
+Est. Caballito – Linea Sarmiento
+
+
+
+FORMAS DE ENVIO Y PLAZOS DE ENTREGA
+
+Correo (MercadoEnvio)
+El despacho se realiza por correo con seguimiento online. El plazo de entrega y costo del mismo lo calculas poniendo tu codigo postal en el zocalo que esta debajo del precio.
+
+Moto Mensajeria (CABA – GBA)
+El envio es en el dia y el costo varia segun el destino. Los dias de lluvia tienen un recargo del 50% y tambien se cobra recargo extra por bulto de gran tamaño.
+
+Micro
+Es para los productos que no aceptan MercadoEnvios y para comprar varios articulos pagando un solo envio. El destino es la terminal o las oficinas de la empresa en tu localidad y la demora es de 48 hs habiles. Todos los paquetes tienen un adicional de $50 para cubrir los gastos de embalaje y traslado al lugar de despacho
       </p>
     </WithStyles(ForwardRef(Grid))>
     <WithStyles(ForwardRef(Grid))
@@ -35,15 +75,25 @@ exports[`ItemDetail should match snapshot 1`] = `
       <p
         className="item-detail__condition"
       >
-         Nuevo - 24 vendidos
+        Nuevo
+         - 
+        500
+         vendidos
       </p>
       <h1
         className="item-detail__name"
       >
-         Deco Reverse Sombrero Oxford
+        Guantes Termicos Primera Piel Ski Trekking Running Softshell
       </h1>
       <Price
-        price="1.980,00"
+        freeShipping={false}
+        price={
+          Object {
+            "amount": "439",
+            "currency": "$",
+            "decimals": 99,
+          }
+        }
         small={false}
       />
       <PrimaryButton
