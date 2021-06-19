@@ -8,7 +8,7 @@ import { Content } from 'components/templates';
 import { useItemDetail } from './hooks';
 
 const ItemDetail = ({ match }) => {
-	const itemDetail = useItemDetail(match.params.id);
+	const { itemDetail, itemDetailCategories } = useItemDetail(match.params.id);
 
 	if (!itemDetail) {
 		return null;
@@ -26,7 +26,7 @@ const ItemDetail = ({ match }) => {
 
 	return (
 		<Content>
-			<BreadcrumbMenu />
+			<BreadcrumbMenu categories={itemDetailCategories} />
 			<Grid container className="item-detail">
 				<Grid item xs={9}>
 					<img

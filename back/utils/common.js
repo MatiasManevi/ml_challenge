@@ -47,7 +47,10 @@ const parsePrice = (price) => {
 	return [amount, decimals];
 };
 
+const paginateArray = (items, limit, offset) => items.slice(offset, limit);
+
 module.exports = {
 	parseListItem,
-	parseItemDetail
+	parseItemDetail,
+	paginateArray
 };

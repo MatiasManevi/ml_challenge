@@ -7,11 +7,11 @@ import { Content } from 'components/templates';
 import { useItems } from './hooks';
 
 const Items = () => {
-	const { items } = useItems();
+	const { items, categories } = useItems();
 
 	return (
 		<Content>
-			<BreadcrumbMenu />
+			<BreadcrumbMenu categories={categories} />
 			{items.map((item) => (
 				<Link key={item.id} className="items__link" to={`/items/${item.id}`}>
 					<Item item={item} />

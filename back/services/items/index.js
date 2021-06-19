@@ -1,6 +1,10 @@
 const axios = require('axios');
 const { MELI_BASE_URL } = require('../../config');
-const { parseListItem, parseItemDetail } = require('../../utils/parsers');
+const {
+	parseListItem,
+	parseItemDetail,
+	paginateArray
+} = require('../../utils/common');
 
 /**
  * Given a query string, it returns the amtching list of items from MELI API
@@ -13,9 +17,14 @@ const getItems = async (queryString, limit, offset = 0) => {
 		const response = await axios.get(
 			`${MELI_BASE_URL}/sites/MLA/search?q=${queryString}`
 		);
+
+		const paginatedItems = paginateArray(response.data.results, limit, offset);
+		const parsedItems = paginatedItems.map(parseListItem);
+		const categories = await getItemsMostResultsCategories(paginatedItems);
+
 		return {
-			categories: [],
-			items: response.data.results.slice(offset, limit).map(parseListItem)
+			categories,
+			items: parsedItems
 		};
 	} catch (e) {
 		throw new Error(e.message);
@@ -28,12 +37,37 @@ const getItems = async (queryString, limit, offset = 0) => {
  */
 const getItemDetail = async (id) => {
 	try {
-		const item = await axios.get(`${MELI_BASE_URL}/items/${id}`);
-		const description = await axios.get(`${MELI_BASE_URL}/items/${id}/description`);
-		return { item: parseItemDetail(item.data, description.data) };
+		const { data } = await axios.get(`${MELI_BASE_URL}/items/${id}`);
+		const description = await getItemDetailDescription(id);
+		const [categories, _] = await getItemCategories(data);
+
+		return { item: parseItemDetail(data, description), categories };
 	} catch (e) {
 		throw new Error(e.message);
 	}
+};
+
+const getItemsMostResultsCategories = async (items) => {
+	let mostResults = 0;
+	let categories = [];
+	for (let i = 0; i < items.length; i++) {
+		const [categoryArray, totalItems] = await getItemCategories(items[i]);
+		if (totalItems > mostResults) {
+			mostResults = totalItems;
+			categories = categoryArray;
+		}
+	}
+	return categories;
+};
+
+const getItemCategories = async ({ category_id }) => {
+	const response = await axios.get(`${MELI_BASE_URL}/categories/${category_id}`);
+	return [response.data.path_from_root, response.data.total_items_in_this_category];
+};
+
+const getItemDetailDescription = async (id) => {
+	const response = await axios.get(`${MELI_BASE_URL}/items/${id}/description`);
+	return response.data;
 };
 
 module.exports = {
