@@ -11,14 +11,12 @@ const { getItems, getItemDetail } = itemsService;
  * Given a search query, it Returns an array of items that matches it
  * @param {*} req
  * @param {*} res
- * @param {*} next
  */
-const get = async (req, res, next) => {
+const get = async (req, res) => {
 	try {
 		const { search, limit, offset } = req.query;
 		const items = await getItems(search, limit, offset);
 		res.send(items);
-		next();
 	} catch (e) {
 		console.error(e);
 		res.sendStatus(500);
@@ -29,14 +27,12 @@ const get = async (req, res, next) => {
  * Given an id, it returns a detailed item record
  * @param {*} req
  * @param {*} res
- * @param {*} next
  */
-const getById = async (req, res, next) => {
+const getById = async (req, res) => {
 	try {
 		const { id } = req.params;
 		const item = await getItemDetail(id);
 		res.send(item);
-		next();
 	} catch (e) {
 		console.error(e.message);
 		res.sendStatus(500);
