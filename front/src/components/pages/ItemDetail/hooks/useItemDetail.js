@@ -1,7 +1,6 @@
 import React from 'react';
-import axios from 'axios';
 
-import { API_BASE_URL } from 'utils';
+import ItemService from 'services/items';
 
 const useItemDetail = (id) => {
 	const [itemDetail, setItemDetail] = React.useState(null);
@@ -9,9 +8,9 @@ const useItemDetail = (id) => {
 
 	React.useEffect(async () => {
 		try {
-			const response = await axios.get(`${API_BASE_URL}/items/${id}`);
-			setItemDetail(response.data.item);
-			setItemDetailCategories(response.data.categories);
+			const response = await ItemService.getById(id);
+			setItemDetail(response.item);
+			setItemDetailCategories(response.categories);
 		} catch (e) {
 			console.error(e);
 		}

@@ -10,7 +10,7 @@ Front
 9. Renderizar items con datos obtenidos desde Api - ok
 10. Renderizar item detail con datos obtenidos desde Api - ok
 11. Cargar categories en items e item detail page - ok
-12. Instanciar axios en un archivo e importarlo a consumers
+12. Instanciar axios en un archivo e importarlo a consumers - ok
 
 Api
 0. Crear proyecto express - ok
@@ -22,3 +22,6 @@ Api
 6. Crear funcion para parsear el cuerpo del response -ok
 7. Crear middleware para author -ok 
 9. Obtener categorias de listado para el breadcrumb - ok
+
+
+Deploying Heroku: git subtree push --prefix back heroku master
