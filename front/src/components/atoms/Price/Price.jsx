@@ -15,7 +15,9 @@ const Price = ({ price, small = true, freeShipping = false }) => {
 					{price.decimals}
 				</sup>
 			</p>
-			{freeShipping && <img className="price__shipping" src="ic_shipping.png" />}
+			{freeShipping && small && (
+				<img className="price__shipping" src="ic_shipping.png" />
+			)}
 		</div>
 	);
 };
