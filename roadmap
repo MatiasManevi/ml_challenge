@@ -8,7 +8,8 @@ Front
 6. Crear componente BreadcrumbMenu - ok
 7. Conectar SearchForm con Api - ok
 9. Renderizar items con datos obtenidos desde Api - ok
-10. Renderizar item detail con datos obtenidos desde Api
+10. Renderizar item detail con datos obtenidos desde Api - ok
+11. Instanciar axios en un archivo e importarlo a consumers
 
 Api
 0. Crear proyecto express - ok
