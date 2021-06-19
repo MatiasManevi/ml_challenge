@@ -11,14 +11,12 @@ const Items = () => {
 
 	return (
 		<Content>
-			<div className="items">
-				<BreadcrumbMenu />
-				{items.map((item) => (
-					<Link key={item.id} className="items__link" to={`/items/${item.id}`}>
-						<Item item={item} />
-					</Link>
-				))}
-			</div>
+			<BreadcrumbMenu />
+			{items.map((item) => (
+				<Link key={item.id} className="items__link" to={`/items/${item.id}`}>
+					<Item item={item} />
+				</Link>
+			))}
 		</Content>
 	);
 };
