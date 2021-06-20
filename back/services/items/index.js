@@ -14,9 +14,11 @@ const {
  */
 const getItems = async (queryString, limit, offset = 0) => {
 	try {
+		console.log(`querying: ${MELI_BASE_URL}/sites/MLA/search?q=${queryString}`);
 		const response = await axios.get(
 			`${MELI_BASE_URL}/sites/MLA/search?q=${queryString}`
 		);
+		console.log(response);
 
 		const paginatedItems = paginateArray(response.data.results, limit, offset);
 		const parsedItems = paginatedItems.map(parseListItem);
