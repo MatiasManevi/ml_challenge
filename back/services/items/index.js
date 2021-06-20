@@ -77,8 +77,8 @@ const getItemsMostResultsCategories = async (items) => {
 };
 
 const getItemCategories = async ({ category_id }) => {
-	const response = await axios.get(`${MELI_BASE_URL}/categories/${category_id}`);
-	return [response.data.path_from_root, response.data.total_items_in_this_category];
+	const { data } = await axios.get(`${MELI_BASE_URL}/categories/${category_id}`);
+	return [data.path_from_root, data.total_items_in_this_category];
 };
 
 module.exports = {
