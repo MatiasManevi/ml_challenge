@@ -37,11 +37,18 @@ const getItems = async (queryString, limit, offset = 0) => {
  */
 const getItemDetail = async (id) => {
 	try {
-		const { data } = await axios.get(`${MELI_BASE_URL}/items/${id}`);
-		const description = await getItemDetailDescription(id);
-		const [categories, _] = await getItemCategories(data);
+		const [item, description] = await Promise.all([
+			axios.get(`${MELI_BASE_URL}/items/${id}`),
+			axios.get(`${MELI_BASE_URL}/items/${id}/description`)
+		]);
 
-		return { item: parseItemDetail(data, description), categories };
+		const [categories, _] = await getItemCategories(item.data);
+		const parsedItems = parseItemDetail(item.data, description.data);
+
+		return {
+			categories,
+			item: parsedItems
+		};
 	} catch (e) {
 		throw new Error(e.message);
 	}
@@ -72,11 +79,6 @@ const getItemsMostResultsCategories = async (items) => {
 const getItemCategories = async ({ category_id }) => {
 	const response = await axios.get(`${MELI_BASE_URL}/categories/${category_id}`);
 	return [response.data.path_from_root, response.data.total_items_in_this_category];
-};
-
-const getItemDetailDescription = async (id) => {
-	const response = await axios.get(`${MELI_BASE_URL}/items/${id}/description`);
-	return response.data;
 };
 
 module.exports = {
