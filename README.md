@@ -23,10 +23,6 @@ Correr de manera separada el siguiente comando en las carpetas `front` y `back` 
 
 `npm install && npm start`
 
-## Demo
-
-La App se encuentra "deployada" mediante Heroku [aqui](https://ml-challng.herokuapp.com/)
-
 ## Licencia
 
 Proyecto bajo licencia [BSD](https://github.com/MatiasManevi/ml_challenge/blob/master/LICENSE).
