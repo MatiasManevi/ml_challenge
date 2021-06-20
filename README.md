@@ -22,6 +22,7 @@ Tecnologias utilizadas
 Ejecutar estos comandos lanzara la app localmente en `http://localhost:5000`
 
 `cd back`
+
 `npm install && npm start`
 
 ## Licencia

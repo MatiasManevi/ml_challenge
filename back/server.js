@@ -8,12 +8,9 @@ const setAuthor = require('./middlewares/setAuthor');
 
 app.use(cors());
 app.use('/api', [setAuthor, routes]);
-
-if (NODE_ENV !== 'development') {
-	app.use('*', (req, res) => {
-		res.sendFile(path.join(__dirname, 'build', 'index.html'));
-	});
-}
+app.use('*', (_, res) => {
+	res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 app.listen(PORT, () => console.log(`App listening on port ${PORT}!`));
 
