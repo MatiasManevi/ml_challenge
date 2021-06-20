@@ -19,8 +19,9 @@ Tecnologias utilizadas
 
 ## Para levantar la App localmente
 
-Correr de manera separada el siguiente comando en las carpetas `front` y `back` respectivamente.
+Ejecutar estos comandos lanzara la app localmente en `http://localhost:5000`
 
+`cd back`
 `npm install && npm start`
 
 ## Licencia
