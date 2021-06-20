@@ -48,15 +48,24 @@ const getItemDetail = async (id) => {
 };
 
 const getItemsMostResultsCategories = async (items) => {
+	const promises = [];
 	let mostResults = 0;
 	let categories = [];
+
 	for (let i = 0; i < items.length; i++) {
-		const [categoryArray, totalItems] = await getItemCategories(items[i]);
+		promises.push(getItemCategories(items[i]));
+	}
+
+	const responses = await Promise.all(promises);
+
+	for (let i = 0; i < responses.length; i++) {
+		const [categoryArray, totalItems] = responses[i];
 		if (totalItems > mostResults) {
 			mostResults = totalItems;
 			categories = categoryArray;
 		}
 	}
+
 	return categories;
 };
 
