@@ -5,30 +5,35 @@ exports[`BreadcrumbMenu should match snapshot 1`] = `
   className="breadcrumb-menu"
 >
   <TextButton
+    clickHandler={[Function]}
     text="Electrónica, Audio y Video"
   />
   <Memo(ForwardRef(ChevronRightIcon))
     fontSize="small"
   />
   <TextButton
+    clickHandler={[Function]}
     text="Audio"
   />
   <Memo(ForwardRef(ChevronRightIcon))
     fontSize="small"
   />
   <TextButton
+    clickHandler={[Function]}
     text="Reproductores Portátiles"
   />
   <Memo(ForwardRef(ChevronRightIcon))
     fontSize="small"
   />
   <TextButton
+    clickHandler={[Function]}
     text="Accesorios"
   />
   <Memo(ForwardRef(ChevronRightIcon))
     fontSize="small"
   />
   <TextButton
+    clickHandler={[Function]}
     text="Parlantes Portátiles"
   />
 </div>

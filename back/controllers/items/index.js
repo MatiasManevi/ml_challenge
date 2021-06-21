@@ -14,8 +14,8 @@ const { getItems, getItemDetail } = itemsService;
  */
 const get = async (req, res) => {
 	try {
-		const { search, limit, offset } = req.query;
-		const items = await getItems(search, limit, offset);
+		const { search, category, limit, offset } = req.query;
+		const items = await getItems(search, category, limit, offset);
 		res.send(items);
 	} catch (e) {
 		console.error(e);

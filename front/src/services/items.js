@@ -1,10 +1,12 @@
 import api from 'services/api';
+import { paginationQuery } from 'utils';
 
 const resource = 'items';
 
 const ItemService = {
-	get(search = '') {
-		return api.get(`${resource}?search=${search}`);
+	get(search = '', category) {
+		const queryString = category ? `?category=${category}` : `?search=${search}`;
+		return api.get(`${resource + queryString + paginationQuery}`);
 	},
 
 	getById(id) {

@@ -7,17 +7,23 @@ const {
 } = require('../../utils/common');
 
 /**
- * Given a query string, it returns the amtching list of items from MELI API
- * @param {string} queryString
+ * Returns the amtching list of items based on query strong or a category id from MELI API
+ * @param {string} search
+ * @param {string} category_id
  * @param {number} limit
  * @param {number} offset
  */
-const getItems = async (queryString, limit, offset = 0) => {
+const getItems = async (search, category_id, limit, offset = 0) => {
 	try {
-		const response = await axios.get(
-			`${MELI_BASE_URL}/sites/MLA/search?q=${queryString}`
-		);
+		let query = '';
 
+		if (category_id) {
+			query = `category=${category_id}`;
+		} else {
+			query = `q=${search}`;
+		}
+
+		const response = await axios.get(`${MELI_BASE_URL}/sites/MLA/search?${query}`);
 		const paginatedItems = paginateArray(response.data.results, limit, offset);
 		const parsedItems = paginatedItems.map(parseListItem);
 		const categories = await getItemsMostResultsCategories(paginatedItems);
