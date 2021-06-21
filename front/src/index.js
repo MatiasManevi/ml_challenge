@@ -5,7 +5,9 @@ import 'index.scss';
 import App from 'App';
 import api from 'services/api';
 
-api.init(`${window.location.protocol}//${window.location.hostname}:5000/api/`);
+api.init(
+	`${window.location.protocol}//${window.location.hostname}:${window.location.port}/api/`
+);
 
 ReactDOM.render(
 	<React.StrictMode>
